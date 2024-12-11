@@ -1,0 +1,171 @@
+body {
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: 'Bebas Neue', sans-serif; 
+    text-align: center;
+    color: #fd05f0;
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 20px 0;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2), 0 0 25px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.contenedor {
+    display:flexbox;
+    position: relative;
+    width: 80%;
+    max-width: 1200px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    margin: auto;
+    top: 23%;
+}
+
+.contenedor img {
+    width: 200px;
+    height: 200px;
+}
+.contenedor svg{
+    width: 200px;
+    height: 200px;
+}
+.ex1 {
+    display: inline-block;
+    animation: rotacion 3s infinite;
+}
+
+@keyframes rotacion {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.ex2 {
+    display: inline-block;
+    animation: desvanecer 2s infinite;
+}
+
+@keyframes desvanecer {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.ex3 path {
+    animation: trazo 4s linear infinite;
+}
+
+.ex3 #path5 {
+    animation: escalar 2s infinite;
+    transform-origin: center;
+}
+
+@keyframes escalar {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes trazo {
+    0% {
+        stroke-dasharray: 0, 100;
+    }
+
+    100% {
+        stroke-dasharray: 100, 0;
+    }
+}
+
+.ex4 #path3, .ex4 #path2, .ex4 #path7 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #0066cc; 
+    transform: translateY(100%); 
+    animation: moverMontaña 1s ease-out forwards;
+  }
+  
+
+  .ex4 #path4, .ex4 #path5, .ex4 #path6, .ex4 #path8 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #ff9900; 
+    transform: translateY(-50%); 
+    animation: moverSol 1s ease-out forwards,  escalaSol 1s 1.2s ease-out infinite;
+    transform-origin: center;
+
+  }
+  
+
+  @keyframes moverMontaña {
+    0% {
+      transform: translateY(100%); 
+    }
+    100% {
+      transform: translateY(0); 
+    }
+  }
+
+  @keyframes moverSol {
+    0% {
+      transform: translateY(-50%); 
+    }
+    100% {
+      transform: translateY(0); 
+    }
+  }
+
+  @keyframes escalaSol {
+    0%{
+        transform: scale(1)
+
+    }
+    50%{
+        transform: scale(0.75);
+    }
+    100%{
+        transform: scale(1);
+    }
+  }
+
+
+  
